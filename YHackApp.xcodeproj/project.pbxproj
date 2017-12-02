@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A51D9491FD2FB6D00B5F33B /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */; };
 		1A85536C1FD2F71200571CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536B1FD2F71200571CCF /* AppDelegate.swift */; };
 		1A85536E1FD2F71200571CCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536D1FD2F71200571CCF /* ViewController.swift */; };
 		1A8553711FD2F71200571CCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A85536F1FD2F71200571CCF /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = "swift-sdk-0.17.0/build/Debug-iphoneos/SpeechToTextV1.framework"; sourceTree = "<group>"; };
 		1A8553681FD2F71200571CCF /* YHackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A85536B1FD2F71200571CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A85536D1FD2F71200571CCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A51D9491FD2FB6D00B5F33B /* SpeechToTextV1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				1A85536A1FD2F71200571CCF /* YHackApp */,
 				1A8553691FD2F71200571CCF /* Products */,
+				1A85628E1FD2F93600571CCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				1A8553721FD2F71200571CCF /* YHackApp.xcdatamodeld */,
 			);
 			path = YHackApp;
+			sourceTree = "<group>";
+		};
+		1A85628E1FD2F93600571CCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +278,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK367DXNJ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-sdk-0.17.0/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = YHackApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-sdk-0.17.0/Source/SupportingFiles/Dependencies/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boycesoftware.YHackApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -279,8 +299,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK367DXNJ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-sdk-0.17.0/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = YHackApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/swift-sdk-0.17.0/Source/SupportingFiles/Dependencies/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boycesoftware.YHackApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -306,6 +334,7 @@
 				1A85537F1FD2F71200571CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
