@@ -43,5 +43,10 @@
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>So that we can record voices</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

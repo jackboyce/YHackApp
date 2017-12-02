@@ -10,6 +10,7 @@ import UIKit
 import SpeechToTextV1
 //import NSLinguisticTagger
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var outputTextView: UITextView!
@@ -30,7 +31,16 @@ class ViewController: UIViewController {
             username: Credentials.SpeechToTextUsername,
             password: Credentials.SpeechToTextPassword
         )
+        fbid = "testing2"
         print("loaded")
+        print("Facebook ID: \(getUserFacebookID(fbid))" )
+        print("Friends: \(getFriendsByUserFacebookID(fbid))")
+        print("Convos from words: \(getConvoFromKeywords(fbid, "words2"))");
+        print("Add user: \(addUser(fbid, "test2@gmail.com", "testfirst2", "testlast2"))")
+        print("Add friend: \(addFriend(fbid, "testfriendname2"))")
+        print("Add convo: \(addConvo(fbid, "testaddconvofriend2", "test conversation2"))")
+        print("Test: \(test())")
+        print("after")
 //        let text = "The American Red Cross was established in Washington, D.C., by Clara Barton."
 //        let tagger = NSLinguisticTagger(tagSchemes: ["nameType"], options: 0)
 //        tagger.string = "The American Red Cross was established in Washington, D.C., by Clara Barton."
