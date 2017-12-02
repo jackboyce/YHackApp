@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A51D9491FD2FB6D00B5F33B /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */; };
+		1A51D94C1FD2FBE600B5F33B /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D94B1FD2FBE600B5F33B /* SpeechToTextV1.framework */; };
+		1A51D94D1FD2FC0A00B5F33B /* SpeechToTextV1.framework in Sources */ = {isa = PBXBuildFile; fileRef = 1A51D94B1FD2FBE600B5F33B /* SpeechToTextV1.framework */; };
+		1A51D9501FD2FC4F00B5F33B /* SpeechToTextV1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D94E1FD2FC4F00B5F33B /* SpeechToTextV1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A51D9531FD2FC8700B5F33B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51D9521FD2FC8700B5F33B /* Credentials.swift */; };
+		1A51D9551FD305AD00B5F33B /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D9541FD305AD00B5F33B /* RestKit.framework */; };
+		1A51D9561FD305AD00B5F33B /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D9541FD305AD00B5F33B /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A85536C1FD2F71200571CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536B1FD2F71200571CCF /* AppDelegate.swift */; };
 		1A85536E1FD2F71200571CCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536D1FD2F71200571CCF /* ViewController.swift */; };
 		1A8553711FD2F71200571CCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A85536F1FD2F71200571CCF /* Main.storyboard */; };
@@ -16,8 +21,26 @@
 		1A8553791FD2F71200571CCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8553771FD2F71200571CCF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1A51D9511FD2FC4F00B5F33B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A51D9501FD2FC4F00B5F33B /* SpeechToTextV1.framework in Embed Frameworks */,
+				1A51D9561FD305AD00B5F33B /* RestKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = "swift-sdk-0.17.0/build/Debug-iphoneos/SpeechToTextV1.framework"; sourceTree = "<group>"; };
+		1A51D94B1FD2FBE600B5F33B /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = "swift-sdk-0.17.0/build/Debug-iphoneos/SpeechToTextV1.framework"; sourceTree = "<group>"; };
+		1A51D94E1FD2FC4F00B5F33B /* SpeechToTextV1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpeechToTextV1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A51D9521FD2FC8700B5F33B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		1A51D9541FD305AD00B5F33B /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A8553681FD2F71200571CCF /* YHackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A85536B1FD2F71200571CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A85536D1FD2F71200571CCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,19 +56,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A51D9491FD2FB6D00B5F33B /* SpeechToTextV1.framework in Frameworks */,
+				1A51D94C1FD2FBE600B5F33B /* SpeechToTextV1.framework in Frameworks */,
+				1A51D9551FD305AD00B5F33B /* RestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A51D94A1FD2FBE600B5F33B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A51D94B1FD2FBE600B5F33B /* SpeechToTextV1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1A85535F1FD2F71100571CCF = {
 			isa = PBXGroup;
 			children = (
+				1A51D9541FD305AD00B5F33B /* RestKit.framework */,
+				1A51D94E1FD2FC4F00B5F33B /* SpeechToTextV1.framework */,
 				1A85536A1FD2F71200571CCF /* YHackApp */,
 				1A8553691FD2F71200571CCF /* Products */,
-				1A85628E1FD2F93600571CCF /* Frameworks */,
+				1A51D94A1FD2FBE600B5F33B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,16 +101,9 @@
 				1A8553771FD2F71200571CCF /* LaunchScreen.storyboard */,
 				1A85537A1FD2F71200571CCF /* Info.plist */,
 				1A8553721FD2F71200571CCF /* YHackApp.xcdatamodeld */,
+				1A51D9521FD2FC8700B5F33B /* Credentials.swift */,
 			);
 			path = YHackApp;
-			sourceTree = "<group>";
-		};
-		1A85628E1FD2F93600571CCF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A51D9481FD2FB6D00B5F33B /* SpeechToTextV1.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +116,7 @@
 				1A8553641FD2F71100571CCF /* Sources */,
 				1A8553651FD2F71100571CCF /* Frameworks */,
 				1A8553661FD2F71100571CCF /* Resources */,
+				1A51D9511FD2FC4F00B5F33B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A51D94D1FD2FC0A00B5F33B /* SpeechToTextV1.framework in Sources */,
 				1A85536E1FD2F71200571CCF /* ViewController.swift in Sources */,
+				1A51D9531FD2FC8700B5F33B /* Credentials.swift in Sources */,
 				1A8553741FD2F71200571CCF /* YHackApp.xcdatamodeld in Sources */,
 				1A85536C1FD2F71200571CCF /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +313,7 @@
 					"$(PROJECT_DIR)/swift-sdk-0.17.0/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = YHackApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +335,7 @@
 					"$(PROJECT_DIR)/swift-sdk-0.17.0/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = YHackApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
