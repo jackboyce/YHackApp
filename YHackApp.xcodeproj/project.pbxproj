@@ -16,6 +16,7 @@
 		1A51D9721FD32F4600B5F33B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A51D9701FD32F4600B5F33B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A51D9741FD32FBD00B5F33B /* ServerCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51D9731FD32FBD00B5F33B /* ServerCommands.swift */; };
 		1A51D9761FD3323400B5F33B /* Alamofire+Synchronous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A51D9751FD3323400B5F33B /* Alamofire+Synchronous.swift */; };
+		1A6997601FD407C9003234C6 /* 24623458_1016393961832259_726032360_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A69975F1FD407C9003234C6 /* 24623458_1016393961832259_726032360_o.png */; };
 		1A85536C1FD2F71200571CCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536B1FD2F71200571CCF /* AppDelegate.swift */; };
 		1A85536E1FD2F71200571CCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85536D1FD2F71200571CCF /* ViewController.swift */; };
 		1A8553711FD2F71200571CCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A85536F1FD2F71200571CCF /* Main.storyboard */; };
@@ -58,8 +59,7 @@
 		1A51D9701FD32F4600B5F33B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A51D9731FD32FBD00B5F33B /* ServerCommands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerCommands.swift; sourceTree = "<group>"; };
 		1A51D9751FD3323400B5F33B /* Alamofire+Synchronous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Synchronous.swift"; sourceTree = "<group>"; };
-		1A51D9A31FD39B0100B5F33B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		1A51D9A41FD39B0100B5F33B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		1A69975F1FD407C9003234C6 /* 24623458_1016393961832259_726032360_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24623458_1016393961832259_726032360_o.png; sourceTree = "<group>"; };
 		1A8553681FD2F71200571CCF /* YHackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A85536B1FD2F71200571CCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A85536D1FD2F71200571CCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +103,6 @@
 		1A51D94A1FD2FBE600B5F33B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A51D9A31FD39B0100B5F33B /* FBSDKCoreKit.framework */,
-				1A51D9A41FD39B0100B5F33B /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +145,7 @@
 				1A51D9521FD2FC8700B5F33B /* Credentials.swift */,
 				1A51D9731FD32FBD00B5F33B /* ServerCommands.swift */,
 				1AAC518E1FD3ACED002CDBAF /* fb-sign-in-button.png */,
+				1A69975F1FD407C9003234C6 /* 24623458_1016393961832259_726032360_o.png */,
 			);
 			path = YHackApp;
 			sourceTree = "<group>";
@@ -212,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6997601FD407C9003234C6 /* 24623458_1016393961832259_726032360_o.png in Resources */,
 				1A8553791FD2F71200571CCF /* LaunchScreen.storyboard in Resources */,
 				1A8553761FD2F71200571CCF /* Assets.xcassets in Resources */,
 				1A8553711FD2F71200571CCF /* Main.storyboard in Resources */,

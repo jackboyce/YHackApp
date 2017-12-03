@@ -15,10 +15,23 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
-        titleLabel.font = UIFont(name: "Menlo-Bold", size: 20)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        titleLabel.font = UIFont(name: "Helvetica-Bold", size: 24)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func LoginButtonPressed(_ sender: Any) {
+        
+        sleep(1)
+        
         let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as! ViewController
         mainViewController.fbid = usernameTextField.text!
         self.navigationController?.pushViewController(mainViewController, animated: true)

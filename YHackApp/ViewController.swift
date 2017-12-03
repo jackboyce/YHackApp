@@ -35,13 +35,15 @@ class ViewController: UIViewController {
             password: Credentials.SpeechToTextPassword
         )
         
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
         outputTextView.layer.borderWidth = 1.0
         outputTextView.layer.borderColor = UIColor.gray.cgColor
-        outputTextView.font = UIFont(name: "Menlo-Regular", size: 14)
+        outputTextView.font = UIFont(name: "Helvetica", size: 14)
+        outputTextView.textAlignment = NSTextAlignment.center
         recordTextView.layer.borderWidth = 1.0
         recordTextView.layer.borderColor = UIColor.gray.cgColor
-        recordTextView.font = UIFont(name: "Menlo-Regular", size: 14)
+        recordTextView.font = UIFont(name: "Helvetica", size: 14)
         
         navigationController?.title = "Reminisce.AI"
         
@@ -54,6 +56,11 @@ class ViewController: UIViewController {
 //        //adding it to view
 //        view.addSubview(loginButton)
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        recordTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     public func textToPOS(str: String) {
@@ -142,6 +149,8 @@ class ViewController: UIViewController {
                 var dictConvos = stringToDict(string: rawConvos)
                 print(rawConvos)
                 var printingString = ""
+                
+                outputTextView.textAlignment = NSTextAlignment.left
                 
                 for i in dictConvos {
                     if let j = i["convo_data"]{
