@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var speechToText: SpeechToText!
     var speechToTextSession: SpeechToTextSession!
     var isStreaming = false
+    var fbid = "testing"
 
     override func viewDidLoad() {
         super.viewDidLoad()
