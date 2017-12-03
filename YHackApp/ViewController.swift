@@ -8,6 +8,7 @@
 
 import UIKit
 import SpeechToTextV1
+//import FBSDKLoginKit
 //import NSLinguisticTagger
 
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var outputTextView: UITextView!
     @IBOutlet weak var recordTextView: UITextView!
+    var keys: [String] = []
 
     var speechToText: SpeechToText!
     var speechToTextSession: SpeechToTextSession!
@@ -31,33 +33,21 @@ class ViewController: UIViewController {
             username: Credentials.SpeechToTextUsername,
             password: Credentials.SpeechToTextPassword
         )
-        fbid = "testing2"
-        print("loaded")
-        print("Facebook ID: \(getUserFacebookID(fbid))" )
-        print("Friends: \(getFriendsByUserFacebookID(fbid))")
-        print("Convos from words: \(getConvoFromKeywords(fbid, "words2"))");
-        print("Add user: \(addUser(fbid, "test2@gmail.com", "testfirst2", "testlast2"))")
-        print("Add friend: \(addFriend(fbid, "testfriendname2"))")
-        print("Add convo: \(addConvo(fbid, "testaddconvofriend2", "test conversation2"))")
-        print("Test: \(test())")
-        print("after")
-//        let text = "The American Red Cross was established in Washington, D.C., by Clara Barton."
-//        let tagger = NSLinguisticTagger(tagSchemes: ["nameType"], options: 0)
-//        tagger.string = "The American Red Cross was established in Washington, D.C., by Clara Barton."
-//        let range = NSRange(location:0, length: text.utf16.count)
-//        let options: NSLinguisticTagger.Options = [.omitPunctuation, .omitWhitespace, .joinNames]
-//        let tags: [String] = ["personalName", "placeName", "organizationName"]
-//        tagger.enumerateTags(in: range, scheme: "nameType", options: options) { tag, tokenRange, otherRange, stop in
-//            print("Inside")
-//            if tag != "" && tags.contains(tag) {
-//                let name = (text as NSString).substring(with: tokenRange)
-//                print("\(name): \(tag)")
-//            }
-//            if tag != "" {
-//                print(tag)
-//            }
-//            
-//        }
+        
+        
+        outputTextView.layer.borderWidth = 5.0
+        outputTextView.layer.borderColor = UIColor.gray.cgColor
+        recordTextView.layer.borderWidth = 5.0
+        recordTextView.layer.borderColor = UIColor.gray.cgColor
+        
+        testOnline()
+        
+//        //creating button
+//        let loginButton = FBSDKLoginButton()
+//        loginButton.center = view.center
+//        
+//        //adding it to view
+//        view.addSubview(loginButton)
         
     }
     
@@ -66,10 +56,16 @@ class ViewController: UIViewController {
         let schemes = NSLinguisticTagger.availableTagSchemes(forLanguage: "en")
         let tagger = NSLinguisticTagger(tagSchemes: schemes, options: Int(options.rawValue))
         tagger.string = str
+        
         tagger.enumerateTags(in: NSMakeRange(0, (str as NSString).length), scheme: NSLinguisticTagSchemeNameTypeOrLexicalClass, options: options) { (tag, tokenRange, _, _) in
             let token = (str as NSString).substring(with: tokenRange)
-            //print("\(token): \(tag)")
-            outputTextView.text! += "\(token): \(tag)\n"
+//            print("\(token): \(tag)")
+            if ["PlaceName", "PersonalName", "Noun"].contains(tag) {
+                //outputTextView.text! += "\(token) "
+                keys.append(token)
+            }
+//            outputTextView.text! += "\(token): \(tag)\n"
+            
         }
     }
 
@@ -113,13 +109,83 @@ class ViewController: UIViewController {
             // stop recognizing microphone audio
             speechToText.stopRecognizeMicrophone()
             
-            outputTextView.text = ""
+            //outputTextView.text = ""
+            keys.removeAll()
             textToPOS(str: recordTextView.text)
+//            for word in outputTextView.text.components(separatedBy: " ") {
+//                print("Convos from \(word): \(getConvoFromKeywords(fbid, "\(word)"))");
+//            }
+            
+//            for word in keys {
+//                print("Convos from \(word): \(getConvoFromKeywords(fbid, "\(word)"))");
+//            }
+            
+            //let name = recordTextView.text.components(separatedBy: " ")[1]
+            
+            sendConvo()
+            
+            //print("Add convo: \(addConvo("testing", "\(name)", "\(recordTextView.text!)"))")
         }
+    }
+    
+    @IBAction func remindButtonPressed(_ sender: Any) {
+        for word in keys {
+            if word != "" {
+                
+                var rawConvos = getConvoFromKeywords(fbid, "\(word)")!
+                print(rawConvos)
+                var dictConvos = stringToDict(string: rawConvos)
+                print(rawConvos)
+                var printingString = ""
+                
+                for i in dictConvos {
+                    if let j = i["convo_data"] {
+                        printingString += i["convo_data"]! + "\n"
+                    }
+                    
+                    //printingString += i["convo_data"] ?? ""
+                }
+                
+                
+                print(printingString)
+                //print("Convos from \(word): \(getConvoFromKeywords(fbid, "\(word)"))");
+                //print(word)
+            }
+        }
+        
+        
+    }
+    
+    public func sendConvo() {
+        fbid = "testing"
+        //let name = recordTextView.text.components(separatedBy: " ")[1]
+        let name = keys[1]
+        print("Add user: \(addUser(fbid, "test@gmail.com", "testfirstname", "testlastname"))")
+        print("Add friend: \(addFriend(fbid, "\(name)"))")
+        print("Add convo: \(addConvo(fbid, "\(name)", "\(recordTextView.text!)"))")
     }
 
     @IBAction func didPressMicrophoneButton(_ sender: Any) {
         streamMicrophoneBasic()
+    }
+    
+    
+    public func testAPI() {
+        let attempt = 3
+        fbid = "testing\(attempt)"
+        print("loaded")
+        print("Facebook ID: \(getUserFacebookID(fbid))" )
+        print("Friends: \(getFriendsByUserFacebookID(fbid))")
+        print("Convos from words: \(getConvoFromKeywords(fbid, "words2"))");
+        print("Add user: \(addUser(fbid, "test\(attempt)@gmail.com", "testfirst\(attempt)", "testlast\(attempt)"))")
+        print("Add friend: \(addFriend(fbid, "testfriendname\(attempt)"))")
+        print("Add convo: \(addConvo(fbid, "testaddconvofriend\(attempt)", "test conversation\(attempt)"))")
+        print("Test: \(test())")
+        print("after")
+    }
+    
+    public func testOnline() {
+        print("Online: \(test())")
     }
 }
 

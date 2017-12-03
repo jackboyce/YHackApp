@@ -285,6 +285,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A0F3F2A1FD3A50600AA2BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A0F3F2C1FD3A50600AA2BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A0F3F2F1FD3A50600AA2BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A0F3F321FD3A50600AA2BAB /* YHackAppFix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YHackAppFix.xcdatamodel; sourceTree = "<group>"; };
+		1A0F3F341FD3A50600AA2BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A0F3F371FD3A50600AA2BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A0F3F391FD3A50600AA2BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312D1E0B1FC2551400E51FF1 /* Usage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Usage.md; path = Documentation/Usage.md; sourceTree = "<group>"; };
 		312D1E0C1FC2551400E51FF1 /* AdvancedUsage.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = AdvancedUsage.md; path = Documentation/AdvancedUsage.md; sourceTree = "<group>"; };
 		316250E41F00ABE900E207A6 /* ISSUE_TEMPLATE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ISSUE_TEMPLATE.md; sourceTree = "<group>"; };
@@ -439,6 +446,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0F3F291FD3A50600AA2BAB /* YHackAppFix */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F3F2A1FD3A50600AA2BAB /* AppDelegate.swift */,
+				1A0F3F2C1FD3A50600AA2BAB /* ViewController.swift */,
+				1A0F3F2E1FD3A50600AA2BAB /* Main.storyboard */,
+				1A0F3F341FD3A50600AA2BAB /* Assets.xcassets */,
+				1A0F3F361FD3A50600AA2BAB /* LaunchScreen.storyboard */,
+				1A0F3F391FD3A50600AA2BAB /* Info.plist */,
+				1A0F3F311FD3A50600AA2BAB /* YHackAppFix.xcdatamodeld */,
+			);
+			path = YHackAppFix;
+			sourceTree = "<group>";
+		};
 		4C256A4E1B09656A0065714F /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +735,7 @@
 				4CE292301EF4A386008DA555 /* Documentation */,
 				F8111E3519A95C8B0040E7D1 /* Source */,
 				F8111E3F19A95C8B0040E7D1 /* Tests */,
+				1A0F3F291FD3A50600AA2BAB /* YHackAppFix */,
 				F8111E3419A95C8B0040E7D1 /* Products */,
 			);
 			indentWidth = 4;
@@ -949,7 +971,7 @@
 		F8111E2A19A95C8B0040E7D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Alamofire;
 				TargetAttributes = {
@@ -992,6 +1014,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F8111E2919A95C8B0040E7D1;
 			productRefGroup = F8111E3419A95C8B0040E7D1 /* Products */;
@@ -1378,6 +1401,25 @@
 			targetProxy = F829C6B91A7A94F100A2CD59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A0F3F2E1FD3A50600AA2BAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0F3F2F1FD3A50600AA2BAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A0F3F361FD3A50600AA2BAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A0F3F371FD3A50600AA2BAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4CCB207D1D45563900C64D5B /* Debug */ = {
@@ -1820,6 +1862,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A0F3F311FD3A50600AA2BAB /* YHackAppFix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A0F3F321FD3A50600AA2BAB /* YHackAppFix.xcdatamodel */,
+			);
+			currentVersion = 1A0F3F321FD3A50600AA2BAB /* YHackAppFix.xcdatamodel */;
+			path = YHackAppFix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F8111E2A19A95C8B0040E7D1 /* Project object */;
 }

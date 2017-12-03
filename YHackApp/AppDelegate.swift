@@ -8,13 +8,14 @@
 
 import UIKit
 import CoreData
+//import FBSDKLoginKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -88,6 +89,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+//    }
+//    
+//    func applicationDidBecomeActive(application: UIApplication) {
+//        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//        FBSDKAppEvents.activateApp()
+//    }
+    
+    /*
+ func applicationDidBecomeActive(application: UIApplication!) {
+ FBSDKAppEvents.activateApp()
+ }
+ 
+ func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+ return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+ }
+ 
+ func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
+ return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+ }
+ */
 
 }
 
