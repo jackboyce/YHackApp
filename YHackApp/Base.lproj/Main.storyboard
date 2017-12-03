@@ -21,12 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohp-3l-Nmi">
-                                <rect key="frame" x="44" y="301" width="286" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="286" id="8Qh-MV-IxK"/>
-                                    <constraint firstAttribute="height" constant="65" id="919-dT-vyA"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminisce.AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45s-b0-etw">
+                                <rect key="frame" x="94" y="140" width="186" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohp-3l-Nmi">
+                                <rect key="frame" x="44" y="453" width="286" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="fb-sign-in-button.png">
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -35,14 +39,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ohp-3l-Nmi" firstAttribute="centerY" secondItem="FwX-9S-v6j" secondAttribute="centerY" id="gtR-NZ-nry"/>
-                            <constraint firstItem="ohp-3l-Nmi" firstAttribute="centerX" secondItem="FwX-9S-v6j" secondAttribute="centerX" id="uFY-tm-PXd"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.77569034695107697" green="0.97995606384259515" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="zaL-MA-h8N"/>
                     <connections>
+                        <outlet property="titleLabel" destination="45s-b0-etw" id="StQ-AQ-Se8"/>
                         <segue destination="BYZ-38-t0r" kind="show" id="R1C-hT-9Xa"/>
                     </connections>
                 </viewController>
@@ -66,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="-1785" y="90"/>
         </scene>
-        <!--MainView-->
+        <!--Reminisce.AI-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainView" title="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="YHackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainView" title="Reminisce.AI" id="BYZ-38-t0r" customClass="ViewController" customModule="YHackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -78,42 +79,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-jO-OMM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Have your friend introduce themselves and start a conversation" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4pb-jO-OMM">
                                 <rect key="frame" x="16" y="64" width="343" height="197"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63182597650000005" green="0.96456335120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-rq-iBy">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Relevant memories will appear" translatesAutoresizingMaskIntoConstraints="NO" id="cvX-rq-iBy">
                                 <rect key="frame" x="16" y="269" width="343" height="203"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63182597650695105" green="0.96456335121008285" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-xb-rfP">
-                                <rect key="frame" x="82" y="606" width="210" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="remindButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJS-W1-w1A"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Td-LM-K1i">
-                                <rect key="frame" x="82" y="480" width="210" height="64"/>
+                                <rect key="frame" x="82" y="489" width="210" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record"/>
+                                <color key="backgroundColor" red="0.63182597650000005" green="0.96456335120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start Record"/>
                                 <connections>
                                     <action selector="didPressMicrophoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ak-6c-hld"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-xb-rfP">
+                                <rect key="frame" x="82" y="570" width="210" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63182597650000005" green="0.96456335120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Recall"/>
+                                <connections>
+                                    <action selector="remindButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJS-W1-w1A"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cvX-rq-iBy" firstAttribute="top" secondItem="4pb-jO-OMM" secondAttribute="bottom" constant="8" id="5yp-rj-2kd"/>
-                            <constraint firstItem="4pb-jO-OMM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cjg-Kt-sgB"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.77569034699999995" green="0.9799560638" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="microphoneButton" destination="9Td-LM-K1i" id="KWk-Ct-Oqt"/>

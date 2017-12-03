@@ -11,7 +11,7 @@ import Alamofire
 //import Alamofire_Synchronous
 
 let url = "http://35.188.243.12:8080"
-var fbid = "kgskdhkjshdk"
+var fbid = "testing"
 //let fire = Alamofire
 
 func getUserFacebookID(_ facebookID: String) -> String? {

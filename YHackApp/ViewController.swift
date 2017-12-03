@@ -35,10 +35,14 @@ class ViewController: UIViewController {
         )
         
         
-        outputTextView.layer.borderWidth = 5.0
+        outputTextView.layer.borderWidth = 1.0
         outputTextView.layer.borderColor = UIColor.gray.cgColor
-        recordTextView.layer.borderWidth = 5.0
+        outputTextView.font = UIFont(name: "Menlo-Regular", size: 14)
+        recordTextView.layer.borderWidth = 1.0
         recordTextView.layer.borderColor = UIColor.gray.cgColor
+        recordTextView.font = UIFont(name: "Menlo-Regular", size: 14)
+        
+        navigationController?.title = "Reminisce.AI"
         
         testOnline()
         
@@ -79,7 +83,7 @@ class ViewController: UIViewController {
         if !isStreaming {
             
             // update state
-            microphoneButton.setTitle("Stop Microphone", for: .normal)
+            microphoneButton.setTitle("Stop Recording", for: .normal)
             isStreaming = true
             
             // define recognition settings
@@ -103,7 +107,7 @@ class ViewController: UIViewController {
         } else {
             
             // update state
-            microphoneButton.setTitle("Start Microphone", for: .normal)
+            microphoneButton.setTitle("Start Recording", for: .normal)
             isStreaming = false
             
             // stop recognizing microphone audio
@@ -139,15 +143,17 @@ class ViewController: UIViewController {
                 var printingString = ""
                 
                 for i in dictConvos {
-                    if let j = i["convo_data"] {
-                        printingString += i["convo_data"]! + "\n"
+                    if let j = i["convo_data"]{
+                        
+                        printingString += "•\t" + i["convo_data"]! + "\n"
                     }
                     
                     //printingString += i["convo_data"] ?? ""
                 }
                 
                 
-                print(printingString)
+                //print(printingString)
+                outputTextView.text = printingString
                 //print("Convos from \(word): \(getConvoFromKeywords(fbid, "\(word)"))");
                 //print(word)
             }
